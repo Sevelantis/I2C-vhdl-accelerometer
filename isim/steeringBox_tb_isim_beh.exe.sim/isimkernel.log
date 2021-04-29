@@ -1,0 +1,29 @@
+Command line:
+   steeringBox_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39039
+
+Thu Apr 29 21:38:00 2021
+
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 184.238 Meg
+
+ Total Signals          : 34
+ Total Nets             : 87
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 448
+Total Line Count : 37
+
+ Total Simulation Time: 0.02 sec
+
+ Current Memory Usage: 259.74 Meg
+
+Thu Apr 29 21:38:04 2021
+

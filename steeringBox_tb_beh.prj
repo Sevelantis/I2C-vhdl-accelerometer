@@ -1,0 +1,2 @@
+vhdl work "SteeringBox.vhd"
+vhdl work "steeringBox_tb.vhd"

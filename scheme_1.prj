@@ -1,0 +1,3 @@
+vhdl work "SteeringBox.vhd"
+vhdl work "../../UCISW2-materialy/I2C_Master.vhd"
+vhdl work "scheme_1.vhf"

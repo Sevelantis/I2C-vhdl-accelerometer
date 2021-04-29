@@ -1,0 +1,8 @@
+vhdtdtfi -lib work ../../UCISW2-materialy/I2C_Master.vhd -prj Akcelerometr -o I2C_Master.spl -module I2C_Master -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 I2C_Master.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/I2C_Master.sym 
+vhdtdtfi -lib work ../../UCISW2-materialy/I2C_Master.vhd -prj Akcelerometr -o I2C_Master.spl -module I2C_Master -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 I2C_Master.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/I2C_Master.sym 
+vhdtdtfi -lib work ../../UCISW2-materialy/I2C_Master.vhd -prj Akcelerometr -o I2C_Master.spl -module I2C_Master -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w I2C_Master.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/I2C_Master.sym 
+vhdtdtfi -lib work ../../UCISW2-materialy/I2C_Master.vhd -prj Akcelerometr -o I2C_Master.spl -module I2C_Master -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w I2C_Master.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/I2C_Master.sym 

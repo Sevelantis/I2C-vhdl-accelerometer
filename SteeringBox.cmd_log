@@ -1,0 +1,44 @@
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
+vhdtdtfi -lib work SteeringBox.vhd -prj Akcelerometr -o SteeringBox.spl -module SteeringBox -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 -w SteeringBox.spl /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.sym 
