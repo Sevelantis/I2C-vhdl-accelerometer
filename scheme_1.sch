@@ -13,21 +13,32 @@
         <signal name="Reset" />
         <signal name="Clk" />
         <signal name="Start" />
-        <signal name="XLXN_64(7:0)" />
+        <signal name="I2C_ADDRESS(7:0)" />
         <signal name="XLXN_65(7:0)" />
         <signal name="XLXN_66(3:0)" />
         <signal name="XLXN_67" />
-        <signal name="XLXN_68" />
+        <signal name="I2C_GO" />
         <signal name="XLXN_69" />
-        <signal name="XLXN_70" />
+        <signal name="I2C_BUSY" />
         <signal name="XLXN_71" />
         <signal name="XLXN_72" />
+        <signal name="X(15:0)" />
+        <signal name="Y(15:0)" />
+        <signal name="Z(15:0)" />
+        <signal name="XLXN_76" />
+        <signal name="XLXN_77" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Output" name="NACK" />
         <port polarity="Input" name="Reset" />
         <port polarity="Input" name="Clk" />
         <port polarity="Input" name="Start" />
+        <port polarity="Output" name="I2C_ADDRESS(7:0)" />
+        <port polarity="Output" name="I2C_GO" />
+        <port polarity="Output" name="I2C_BUSY" />
+        <port polarity="Output" name="X(15:0)" />
+        <port polarity="Output" name="Y(15:0)" />
+        <port polarity="Output" name="Z(15:0)" />
         <blockdef name="I2C_Master">
             <timestamp>2021-3-23T8:0:12</timestamp>
             <rect width="304" x="64" y="-512" height="512" />
@@ -82,33 +93,33 @@
             <blockpin signalname="Reset" name="Reset" />
             <blockpin signalname="Clk" name="Clk" />
             <blockpin signalname="Start" name="Start" />
-            <blockpin signalname="XLXN_70" name="I2C_Busy" />
+            <blockpin signalname="I2C_BUSY" name="I2C_Busy" />
             <blockpin signalname="XLXN_71" name="I2C_FIFO_Empty" />
             <blockpin signalname="XLXN_72" name="I2C_FIFO_Full" />
             <blockpin signalname="XLXN_16(7:0)" name="I2C_FIFO_DO(7:0)" />
             <blockpin signalname="XLXN_67" name="I2C_FIFO_Pop" />
-            <blockpin signalname="XLXN_68" name="I2C_Go" />
+            <blockpin signalname="I2C_GO" name="I2C_Go" />
             <blockpin signalname="XLXN_69" name="I2C_FIFO_Push" />
-            <blockpin signalname="XLXN_64(7:0)" name="I2C_Address(7:0)" />
+            <blockpin signalname="I2C_ADDRESS(7:0)" name="I2C_Address(7:0)" />
             <blockpin signalname="XLXN_65(7:0)" name="I2C_FIFO_DI(7:0)" />
             <blockpin signalname="XLXN_66(3:0)" name="I2C_ReadCnt(3:0)" />
-            <blockpin name="X(15:0)" />
-            <blockpin name="Y(15:0)" />
-            <blockpin name="Z(15:0)" />
+            <blockpin signalname="X(15:0)" name="X(15:0)" />
+            <blockpin signalname="Y(15:0)" name="Y(15:0)" />
+            <blockpin signalname="Z(15:0)" name="Z(15:0)" />
         </block>
         <block symbolname="I2C_Master" name="XLXI_1">
             <blockpin signalname="Clk" name="Clk" />
             <blockpin signalname="XLXN_67" name="FIFO_Pop" />
             <blockpin signalname="Reset" name="Reset" />
-            <blockpin signalname="XLXN_68" name="Go" />
+            <blockpin signalname="I2C_GO" name="Go" />
             <blockpin signalname="XLXN_69" name="FIFO_Push" />
-            <blockpin signalname="XLXN_64(7:0)" name="Address(7:0)" />
+            <blockpin signalname="I2C_ADDRESS(7:0)" name="Address(7:0)" />
             <blockpin signalname="XLXN_65(7:0)" name="FIFO_DI(7:0)" />
             <blockpin signalname="XLXN_66(3:0)" name="ReadCnt(3:0)" />
             <blockpin signalname="SDA" name="SDA" />
             <blockpin signalname="SCL" name="SCL" />
             <blockpin signalname="NACK" name="NACK" />
-            <blockpin signalname="XLXN_70" name="Busy" />
+            <blockpin signalname="I2C_BUSY" name="Busy" />
             <blockpin signalname="XLXN_71" name="FIFO_Empty" />
             <blockpin signalname="XLXN_72" name="FIFO_Full" />
             <blockpin signalname="XLXN_16(7:0)" name="FIFO_DO(7:0)" />
@@ -151,8 +162,7 @@
             <wire x2="384" y1="144" y2="336" x1="384" />
         </branch>
         <branch name="Start">
-            <wire x2="272" y1="400" y2="400" x1="256" />
-            <wire x2="400" y1="400" y2="400" x1="272" />
+            <wire x2="400" y1="400" y2="400" x1="256" />
         </branch>
         <iomarker fontsize="28" x="1648" y="544" name="SDA" orien="R0" />
         <iomarker fontsize="28" x="1648" y="608" name="SCL" orien="R0" />
@@ -160,43 +170,44 @@
         <iomarker fontsize="28" x="256" y="400" name="Start" orien="R180" />
         <iomarker fontsize="28" x="256" y="336" name="Clk" orien="R180" />
         <iomarker fontsize="28" x="256" y="272" name="Reset" orien="R180" />
-        <branch name="XLXN_64(7:0)">
+        <branch name="I2C_ADDRESS(7:0)">
             <wire x2="960" y1="464" y2="464" x1="928" />
             <wire x2="960" y1="464" y2="544" x1="960" />
-            <wire x2="1072" y1="544" y2="544" x1="960" />
-            <wire x2="1088" y1="544" y2="544" x1="1072" />
+            <wire x2="1088" y1="544" y2="544" x1="960" />
+            <wire x2="1024" y1="464" y2="464" x1="960" />
+            <wire x2="1024" y1="256" y2="464" x1="1024" />
         </branch>
         <branch name="XLXN_65(7:0)">
             <wire x2="944" y1="528" y2="528" x1="928" />
             <wire x2="944" y1="528" y2="608" x1="944" />
-            <wire x2="1072" y1="608" y2="608" x1="944" />
-            <wire x2="1088" y1="608" y2="608" x1="1072" />
+            <wire x2="1088" y1="608" y2="608" x1="944" />
         </branch>
         <branch name="XLXN_66(3:0)">
             <wire x2="1008" y1="592" y2="592" x1="928" />
             <wire x2="1008" y1="592" y2="672" x1="1008" />
-            <wire x2="1072" y1="672" y2="672" x1="1008" />
-            <wire x2="1088" y1="672" y2="672" x1="1072" />
+            <wire x2="1088" y1="672" y2="672" x1="1008" />
         </branch>
         <branch name="XLXN_67">
             <wire x2="1008" y1="272" y2="272" x1="928" />
             <wire x2="1008" y1="272" y2="288" x1="1008" />
             <wire x2="1088" y1="288" y2="288" x1="1008" />
         </branch>
-        <branch name="XLXN_68">
+        <branch name="I2C_GO">
             <wire x2="944" y1="336" y2="336" x1="928" />
             <wire x2="944" y1="336" y2="416" x1="944" />
             <wire x2="1088" y1="416" y2="416" x1="944" />
+            <wire x2="944" y1="240" y2="336" x1="944" />
         </branch>
         <branch name="XLXN_69">
             <wire x2="1008" y1="400" y2="400" x1="928" />
             <wire x2="1008" y1="400" y2="480" x1="1008" />
             <wire x2="1088" y1="480" y2="480" x1="1008" />
         </branch>
-        <branch name="XLXN_70">
+        <branch name="I2C_BUSY">
+            <wire x2="352" y1="944" y2="944" x1="208" />
+            <wire x2="1584" y1="944" y2="944" x1="352" />
             <wire x2="400" y1="464" y2="464" x1="352" />
             <wire x2="352" y1="464" y2="944" x1="352" />
-            <wire x2="1584" y1="944" y2="944" x1="352" />
             <wire x2="1584" y1="288" y2="288" x1="1520" />
             <wire x2="1584" y1="288" y2="944" x1="1584" />
         </branch>
@@ -214,5 +225,20 @@
             <wire x2="1552" y1="416" y2="416" x1="1520" />
             <wire x2="1552" y1="416" y2="912" x1="1552" />
         </branch>
+        <branch name="X(15:0)">
+            <wire x2="960" y1="720" y2="720" x1="928" />
+        </branch>
+        <iomarker fontsize="28" x="960" y="720" name="X(15:0)" orien="R0" />
+        <branch name="Y(15:0)">
+            <wire x2="960" y1="784" y2="784" x1="928" />
+        </branch>
+        <iomarker fontsize="28" x="960" y="784" name="Y(15:0)" orien="R0" />
+        <branch name="Z(15:0)">
+            <wire x2="960" y1="848" y2="848" x1="928" />
+        </branch>
+        <iomarker fontsize="28" x="960" y="848" name="Z(15:0)" orien="R0" />
+        <iomarker fontsize="28" x="1024" y="256" name="I2C_ADDRESS(7:0)" orien="R270" />
+        <iomarker fontsize="28" x="944" y="240" name="I2C_GO" orien="R270" />
+        <iomarker fontsize="28" x="208" y="944" name="I2C_BUSY" orien="R180" />
     </sheet>
 </drawing>

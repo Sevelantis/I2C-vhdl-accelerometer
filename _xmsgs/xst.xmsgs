@@ -5,52 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 49: Syntax error near &quot;<arg fmt="%s" index="1">;</arg>&quot;.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 61: <arg fmt="%s" index="1">state</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="854" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 32: Unit &lt;<arg fmt="%s" index="1">steeringbox</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 77: <arg fmt="%s" index="1">reset</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="error" file="HDLCompiler" num="374" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 58: Entity &lt;<arg fmt="%s" index="1">steeringbox</arg>&gt; is not yet compiled.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I2C_FIFO_Empty</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 69: &lt;<arg fmt="%s" index="1">reset</arg>&gt; is not declared.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">I2C_FIFO_Full</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 68: &lt;<arg fmt="%s" index="1">rising_edge</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 66: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 82: &lt;<arg fmt="%s" index="1">x</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="24" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 81: <arg fmt="%s" index="1">&quot;**&quot;</arg> expects <arg fmt="%d" index="2">2</arg> arguments
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1731" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 81: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;=&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;=&quot;</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 80: &lt;<arg fmt="%s" index="1">rising_edge</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 78: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 96: &lt;<arg fmt="%s" index="1">reset</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 101: &lt;<arg fmt="%s" index="1">start</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 112: &lt;<arg fmt="%s" index="1">busy</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 120: &lt;<arg fmt="%s" index="1">busy</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="old" >"/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/SteeringBox.vhd" Line 130: Syntax error near &quot;<arg fmt="%s" index="1">process</arg>&quot;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_1/state_FSM_FFd6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">scheme_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;XLXI_5/STATE_FSM_FFd9&gt; </arg>
 </msg>
 
 </messages>

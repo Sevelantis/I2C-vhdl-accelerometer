@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Apr 23 10:05:46 2021">
+<application name="pn" timeStamp="Fri Apr 30 10:26:01 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="C048EF560CB6C4940010BEE1DC502984" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectIteration" value="1" type="project"/>
 <property name="ProjectFile" value="/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/Akcelerometr.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2021-03-20T10:52:42" type="project"/>
 </section>
@@ -19,7 +19,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_OverwriteSym" value="true" type="process"/>
 <property name="PROP_ProjectDescription" value="Joachim Akcelerometr" type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/scheme_1_scheme_1_sch_tb/UUT" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/scheme_1_scheme_1_sch_tb" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -27,9 +27,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2021-03-20T10:52:42" type="design"/>
 <property name="PROP_intWbtProjectID" value="C048EF560CB6C4940010BEE1DC502984" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.scheme_1" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.scheme_1_scheme_1_sch_tb" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Artix7" type="design"/>
 <property name="PROP_DevDevice" value="xc7a100t" type="design"/>
@@ -39,7 +40,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_SCHEMATIC" value="1" type="source"/>
-<property name="FILE_VHDL" value="3" type="source"/>
+<property name="FILE_VHDL" value="2" type="source"/>
 </section>
 </application>
 </document>

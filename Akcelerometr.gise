@@ -26,32 +26,66 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="I2C_Master.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="SteeringBox.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="SteeringBox.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="scheme_1.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="scheme_1.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="scheme_1.jhd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="scheme_1.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="scheme_1.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="scheme_1.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="scheme_1.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="scheme_1.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="scheme_1.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="scheme_1.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="scheme_1.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="scheme_1.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="scheme_1.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="scheme_1.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="scheme_1.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="scheme_1.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="scheme_1.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="scheme_1.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="scheme_1.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="scheme_1.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="scheme_1.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="scheme_1_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="scheme_1_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="scheme_1_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="scheme_1_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="scheme_1_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="scheme_1_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scheme_1_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scheme_1_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="scheme_1_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="scheme_1_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scheme_1_par.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="scheme_1_scheme_1_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="scheme_1_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="scheme_1_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="scheme_1_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scheme_1_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="steeringBox_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="steeringBox_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="steeringBox_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="steeringBox_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_2_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_2_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_2_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -60,18 +94,22 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619725079" xil_pn:in_ck="6497018278665443097" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1619725079">
+    <transform xil_pn:end_ts="1619772217" xil_pn:in_ck="950977797369601206" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1619772217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../../UCISW2-materialy/I2C_Master.vhd"/>
       <outfile xil_pn:name="SteeringBox.vhd"/>
-      <outfile xil_pn:name="steeringBox_tb.vhd"/>
+      <outfile xil_pn:name="scheme2_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1619723779" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8490562393245273749" xil_pn:start_ts="1619723779">
+    <transform xil_pn:end_ts="1619771067" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3703284744321772862" xil_pn:start_ts="1619771067">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619724930" xil_pn:in_ck="5968942189894313393" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8065159152704775155" xil_pn:start_ts="1619724929">
+    <transform xil_pn:end_ts="1619772217" xil_pn:in_ck="5968942189894313393" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4672396670813665252" xil_pn:start_ts="1619772217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="scheme_1.vhf"/>
@@ -80,38 +118,49 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619725079" xil_pn:in_ck="4060074365257525488" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1619725079">
+    <transform xil_pn:end_ts="1619772217" xil_pn:in_ck="-5486675652870893363" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1619772217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../../UCISW2-materialy/I2C_Master.vhd"/>
       <outfile xil_pn:name="SteeringBox.vhd"/>
+      <outfile xil_pn:name="scheme2_tb.vhd"/>
       <outfile xil_pn:name="scheme_1.vhf"/>
-      <outfile xil_pn:name="steeringBox_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1619725079" xil_pn:in_ck="4060074365257525488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2383927584152314650" xil_pn:start_ts="1619725079">
+    <transform xil_pn:end_ts="1619772219" xil_pn:in_ck="-5486675652870893363" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4264877182769662785" xil_pn:start_ts="1619772217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="steeringBox_tb_beh.prj"/>
-      <outfile xil_pn:name="steeringBox_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="scheme_1_scheme_1_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1619725079" xil_pn:in_ck="-1998659713587222290" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2530682879221081977" xil_pn:start_ts="1619725079">
+    <transform xil_pn:end_ts="1619772219" xil_pn:in_ck="-2283731729158558984" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6118330565677642676" xil_pn:start_ts="1619772219">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="steeringBox_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1619117760" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1619117760">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619117761" xil_pn:in_ck="5968942189894313393" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4915488272779071376" xil_pn:start_ts="1619117760">
+    <transform xil_pn:end_ts="1619771129" xil_pn:in_ck="5968942189894313393" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4915488272779071376" xil_pn:start_ts="1619771128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -142,18 +191,23 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1619165150" xil_pn:in_ck="-541179826175966335" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2284011344633371073" xil_pn:start_ts="1619165146">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1619771135" xil_pn:in_ck="-541179826175966335" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2284011344633371073" xil_pn:start_ts="1619771129">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="scheme_1.jhd"/>
       <outfile xil_pn:name="scheme_1.lso"/>
+      <outfile xil_pn:name="scheme_1.ngc"/>
+      <outfile xil_pn:name="scheme_1.ngr"/>
       <outfile xil_pn:name="scheme_1.prj"/>
+      <outfile xil_pn:name="scheme_1.stx"/>
       <outfile xil_pn:name="scheme_1.syr"/>
       <outfile xil_pn:name="scheme_1.xst"/>
       <outfile xil_pn:name="scheme_1_xst.xrpt"/>
@@ -164,6 +218,54 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1619771139" xil_pn:in_ck="5968942189894308075" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5074364324703704499" xil_pn:start_ts="1619771135">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="scheme_1.bld"/>
+      <outfile xil_pn:name="scheme_1.ngd"/>
+      <outfile xil_pn:name="scheme_1_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1619771161" xil_pn:in_ck="5968942189894308076" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1619771139">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="scheme_1.pcf"/>
+      <outfile xil_pn:name="scheme_1_map.map"/>
+      <outfile xil_pn:name="scheme_1_map.mrp"/>
+      <outfile xil_pn:name="scheme_1_map.ncd"/>
+      <outfile xil_pn:name="scheme_1_map.ngm"/>
+      <outfile xil_pn:name="scheme_1_map.xrpt"/>
+      <outfile xil_pn:name="scheme_1_summary.xml"/>
+      <outfile xil_pn:name="scheme_1_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1619771184" xil_pn:in_ck="-4339829347687238139" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1619771161">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="scheme_1.ncd"/>
+      <outfile xil_pn:name="scheme_1.pad"/>
+      <outfile xil_pn:name="scheme_1.par"/>
+      <outfile xil_pn:name="scheme_1.ptwx"/>
+      <outfile xil_pn:name="scheme_1.unroutes"/>
+      <outfile xil_pn:name="scheme_1.xpi"/>
+      <outfile xil_pn:name="scheme_1_pad.csv"/>
+      <outfile xil_pn:name="scheme_1_pad.txt"/>
+      <outfile xil_pn:name="scheme_1_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1619771184" xil_pn:in_ck="5968942189894307944" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1619771175">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="scheme_1.twr"/>
+      <outfile xil_pn:name="scheme_1.twx"/>
     </transform>
   </transforms>
 
