@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : scheme_1.vhf
--- /___/   /\     Timestamp : 04/30/2021 10:43:37
+-- /___/   /\     Timestamp : 05/06/2021 20:03:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -26,31 +26,28 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity scheme_1 is
-   port ( Clk         : in    std_logic; 
-          Reset       : in    std_logic; 
-          Start       : in    std_logic; 
-          I2C_ADDRESS : out   std_logic_vector (7 downto 0); 
-          I2C_BUSY    : out   std_logic; 
-          I2C_GO      : out   std_logic; 
-          NACK        : out   std_logic; 
-          X           : out   std_logic_vector (15 downto 0); 
-          Y           : out   std_logic_vector (15 downto 0); 
-          Z           : out   std_logic_vector (15 downto 0); 
-          SCL         : inout std_logic; 
-          SDA         : inout std_logic);
+   port ( Clk   : in    std_logic; 
+          Reset : in    std_logic; 
+          Start : in    std_logic; 
+          NACK  : out   std_logic; 
+          X     : out   std_logic_vector (15 downto 0); 
+          Y     : out   std_logic_vector (15 downto 0); 
+          Z     : out   std_logic_vector (15 downto 0); 
+          SCL   : inout std_logic; 
+          SDA   : inout std_logic);
 end scheme_1;
 
 architecture BEHAVIORAL of scheme_1 is
-   signal XLXN_16           : std_logic_vector (7 downto 0);
-   signal XLXN_65           : std_logic_vector (7 downto 0);
-   signal XLXN_66           : std_logic_vector (3 downto 0);
-   signal XLXN_67           : std_logic;
-   signal XLXN_69           : std_logic;
-   signal XLXN_71           : std_logic;
-   signal XLXN_72           : std_logic;
-   signal I2C_GO_DUMMY      : std_logic;
-   signal I2C_BUSY_DUMMY    : std_logic;
-   signal I2C_ADDRESS_DUMMY : std_logic_vector (7 downto 0);
+   signal I2C_ADDRESS : std_logic_vector (7 downto 0);
+   signal I2C_BUSY    : std_logic;
+   signal I2C_GO      : std_logic;
+   signal XLXN_16     : std_logic_vector (7 downto 0);
+   signal XLXN_65     : std_logic_vector (7 downto 0);
+   signal XLXN_66     : std_logic_vector (3 downto 0);
+   signal XLXN_67     : std_logic;
+   signal XLXN_69     : std_logic;
+   signal XLXN_71     : std_logic;
+   signal XLXN_72     : std_logic;
    component I2C_Master
       port ( Clk        : in    std_logic; 
              FIFO_Pop   : in    std_logic; 
@@ -89,19 +86,16 @@ architecture BEHAVIORAL of scheme_1 is
    end component;
    
 begin
-   I2C_ADDRESS(7 downto 0) <= I2C_ADDRESS_DUMMY(7 downto 0);
-   I2C_BUSY <= I2C_BUSY_DUMMY;
-   I2C_GO <= I2C_GO_DUMMY;
    XLXI_1 : I2C_Master
-      port map (Address(7 downto 0)=>I2C_ADDRESS_DUMMY(7 downto 0),
+      port map (Address(7 downto 0)=>I2C_ADDRESS(7 downto 0),
                 Clk=>Clk,
                 FIFO_DI(7 downto 0)=>XLXN_65(7 downto 0),
                 FIFO_Pop=>XLXN_67,
                 FIFO_Push=>XLXN_69,
-                Go=>I2C_GO_DUMMY,
+                Go=>I2C_GO,
                 ReadCnt(3 downto 0)=>XLXN_66(3 downto 0),
                 Reset=>Reset,
-                Busy=>I2C_BUSY_DUMMY,
+                Busy=>I2C_BUSY,
                 FIFO_DO(7 downto 0)=>XLXN_16(7 downto 0),
                 FIFO_Empty=>XLXN_71,
                 FIFO_Full=>XLXN_72,
@@ -111,17 +105,17 @@ begin
    
    XLXI_5 : SteeringBox
       port map (Clk=>Clk,
-                I2C_Busy=>I2C_BUSY_DUMMY,
+                I2C_Busy=>I2C_BUSY,
                 I2C_FIFO_DO(7 downto 0)=>XLXN_16(7 downto 0),
                 I2C_FIFO_Empty=>XLXN_71,
                 I2C_FIFO_Full=>XLXN_72,
                 Reset=>Reset,
                 Start=>Start,
-                I2C_Address(7 downto 0)=>I2C_ADDRESS_DUMMY(7 downto 0),
+                I2C_Address(7 downto 0)=>I2C_ADDRESS(7 downto 0),
                 I2C_FIFO_DI(7 downto 0)=>XLXN_65(7 downto 0),
                 I2C_FIFO_Pop=>XLXN_67,
                 I2C_FIFO_Push=>XLXN_69,
-                I2C_Go=>I2C_GO_DUMMY,
+                I2C_Go=>I2C_GO,
                 I2C_ReadCnt(3 downto 0)=>XLXN_66(3 downto 0),
                 X(15 downto 0)=>X(15 downto 0),
                 Y(15 downto 0)=>Y(15 downto 0),

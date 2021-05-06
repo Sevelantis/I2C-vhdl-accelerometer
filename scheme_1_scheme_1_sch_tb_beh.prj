@@ -1,4 +1,4 @@
 vhdl work "SteeringBox.vhd"
 vhdl work "../../UCISW2-materialy/I2C_Master.vhd"
 vhdl work "scheme_1.vhf"
-vhdl work "scheme2_tb.vhd"
+vhdl work "read_from_adxl345_tb.vhd"

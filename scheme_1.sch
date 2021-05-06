@@ -25,17 +25,12 @@
         <signal name="X(15:0)" />
         <signal name="Y(15:0)" />
         <signal name="Z(15:0)" />
-        <signal name="XLXN_76" />
-        <signal name="XLXN_77" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Output" name="NACK" />
         <port polarity="Input" name="Reset" />
         <port polarity="Input" name="Clk" />
         <port polarity="Input" name="Start" />
-        <port polarity="Output" name="I2C_ADDRESS(7:0)" />
-        <port polarity="Output" name="I2C_GO" />
-        <port polarity="Output" name="I2C_BUSY" />
         <port polarity="Output" name="X(15:0)" />
         <port polarity="Output" name="Y(15:0)" />
         <port polarity="Output" name="Z(15:0)" />
@@ -174,8 +169,6 @@
             <wire x2="960" y1="464" y2="464" x1="928" />
             <wire x2="960" y1="464" y2="544" x1="960" />
             <wire x2="1088" y1="544" y2="544" x1="960" />
-            <wire x2="1024" y1="464" y2="464" x1="960" />
-            <wire x2="1024" y1="256" y2="464" x1="1024" />
         </branch>
         <branch name="XLXN_65(7:0)">
             <wire x2="944" y1="528" y2="528" x1="928" />
@@ -196,7 +189,6 @@
             <wire x2="944" y1="336" y2="336" x1="928" />
             <wire x2="944" y1="336" y2="416" x1="944" />
             <wire x2="1088" y1="416" y2="416" x1="944" />
-            <wire x2="944" y1="240" y2="336" x1="944" />
         </branch>
         <branch name="XLXN_69">
             <wire x2="1008" y1="400" y2="400" x1="928" />
@@ -204,10 +196,9 @@
             <wire x2="1088" y1="480" y2="480" x1="1008" />
         </branch>
         <branch name="I2C_BUSY">
-            <wire x2="352" y1="944" y2="944" x1="208" />
-            <wire x2="1584" y1="944" y2="944" x1="352" />
             <wire x2="400" y1="464" y2="464" x1="352" />
             <wire x2="352" y1="464" y2="944" x1="352" />
+            <wire x2="1584" y1="944" y2="944" x1="352" />
             <wire x2="1584" y1="288" y2="288" x1="1520" />
             <wire x2="1584" y1="288" y2="944" x1="1584" />
         </branch>
@@ -228,7 +219,6 @@
         <branch name="X(15:0)">
             <wire x2="960" y1="720" y2="720" x1="928" />
         </branch>
-        <iomarker fontsize="28" x="960" y="720" name="X(15:0)" orien="R0" />
         <branch name="Y(15:0)">
             <wire x2="960" y1="784" y2="784" x1="928" />
         </branch>
@@ -237,8 +227,6 @@
             <wire x2="960" y1="848" y2="848" x1="928" />
         </branch>
         <iomarker fontsize="28" x="960" y="848" name="Z(15:0)" orien="R0" />
-        <iomarker fontsize="28" x="1024" y="256" name="I2C_ADDRESS(7:0)" orien="R270" />
-        <iomarker fontsize="28" x="944" y="240" name="I2C_GO" orien="R270" />
-        <iomarker fontsize="28" x="208" y="944" name="I2C_BUSY" orien="R180" />
+        <iomarker fontsize="28" x="960" y="720" name="X(15:0)" orien="R0" />
     </sheet>
 </drawing>

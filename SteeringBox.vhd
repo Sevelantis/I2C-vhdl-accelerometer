@@ -38,8 +38,14 @@ end SteeringBox;
 
 architecture Behavioral of SteeringBox is
 
-type qSTATES is (qReset, qIdle, qPush, qWrite, qBusyWrite, qRead, qBusyRead, qPop, qEnd);
+type qSTATES is (
+		qReset, qIdle, qInitSetAddr, qInitSetAddrVal, qInitWrite, qInitBusyWrite,
+		qPush, qWrite, qBusyWrite, qRead, qBusyRead, 
+		qPopData, qPop, qWait
+		);
 signal STATE, STATE_NEXT : qSTATES;
+
+signal CNTR : integer range 0 to 5;
 	
 begin
 
@@ -55,12 +61,44 @@ begin
 	end if;
 end process;
 
--- output
-HANDLE_OUTPUT: process(CLK)
+-- action on states:  qPop, qWait, qBusyRead
+HANDLE_ACTION_ON_STATES: process(CLK)
 begin
-	if STATE = qPop then
-		if rising_edge(CLK) then  
-			X(7 downto 0) <= I2C_FIFO_DO;
+				
+	if rising_edge(CLK) then
+	
+		if STATE = qBusyRead then
+			CNTR <= 0;
+		
+		elsif STATE = qPop then
+
+			case(CNTR) is
+		
+				when 0 =>
+					X( 7 downto 0) <= I2C_FIFO_DO;
+					
+				when 1 =>
+					X(15 downto 8) <= I2C_FIFO_DO;
+					
+				when 2 =>
+					Y( 7 downto 0) <= I2C_FIFO_DO;
+					
+				when 3 =>
+					Y(15 downto 8) <= I2C_FIFO_DO;
+					
+				when 4 =>
+					Z( 7 downto 0) <= I2C_FIFO_DO;
+					
+				when 5 =>
+					Z(15 downto 8) <= I2C_FIFO_DO;
+					
+			end case;
+		
+			CNTR <= CNTR + 1;
+			
+		--elsif STATE = qWait then
+			--TODO wait
+			
 		end if;
 	end if;
 end process;
@@ -80,9 +118,23 @@ begin
 			
 		when qIdle =>
 			if Start = '1' then
+				STATE_NEXT <= qInitSetAddr;
+			end if;
+		
+		when qInitSetAddr =>
+			STATE_NEXT <= qInitSetAddrVal;
+		
+		when qInitSetAddrVal =>
+			STATE_NEXT <= qInitWrite;
+		
+		when qInitWrite =>
+			STATE_NEXT <= qInitBusyWrite;
+			
+		when qInitBusyWrite =>
+			if I2C_Busy = '0' then
 				STATE_NEXT <= qPush;
 			end if;
-			
+		
 		when qPush =>
 			STATE_NEXT <= qWrite;
 		
@@ -99,32 +151,57 @@ begin
 
 		when qBusyRead =>
 			if I2C_Busy = '0' then
-				STATE_NEXT <= qPop;
+				STATE_NEXT <= qPopData;
 			end if;
 		
+		when qPopData =>
+			if CNTR < 6 then
+				STATE_NEXT <= qPop;
+			else
+				STATE_NEXT <= qWait;
+			end if;
+			
 		when qPop =>
-			STATE_NEXT <= qEnd;
+			STATE_NEXT <= qPopData;
 		
-		when qEnd =>
-			STATE_NEXT <= qEnd;
+		when qWait =>
+			--todo add wait
+			--if ITERATIONS = 500000 then
+				STATE_NEXT <= qPush;
+			--end if;
 	
 	end case;
 		
 end process;
 
 -- set states resources
---qPush
-I2C_FIFO_DI <= X"00"; -- 4+4[bit]= 1 [bajt]
-I2C_FIFO_Push <= '1' when STATE = qPush else '0';
+--I2C_FIFO_DI 					X"00" -> 4+4[bit]= 1 [bajt]
+I2C_FIFO_DI <= X"2D" when STATE = qInitSetAddr;
+I2C_FIFO_DI <= X"08" when STATE = qInitSetAddrVal;
+I2C_FIFO_DI <= X"32" when STATE = qPush;
 
---qWrite/qRead
-I2C_Address <= X"3A" when STATE = qWrite else X"3B" when STATE = qRead else X"00";
-I2C_Go <= '1' when (STATE = qWrite or STATE = qRead) else '0';
-I2C_ReadCnt <= X"1" when STATE = qRead else X"0";
+--I2C_FIFO_Push
+I2C_FIFO_Push <= '1' when (STATE = qInitSetAddr or
+									STATE = qInitSetAddrVal or
+									STATE = qPush);
+--I2C_Address
+I2C_Address <= X"3A" when (STATE = qInitWrite or STATE = qWrite)
+									else X"3B" when STATE = qRead;
 
---qPop
+--I2C_Go
+I2C_Go <= '1' when (	STATE = qWrite or 
+							STATE = qRead or 
+							STATE = qInitWrite)
+							else '0';								
+
+--I2C_ReadCnt
+I2C_ReadCnt <= X"6" when STATE = qRead else X"0";
+
+--I2C_FIFO_Pop
 I2C_FIFO_Pop <= '1' when STATE = qPop else '0';
 
+--CNTR
+--CNTR <= 0 when STATE = qBusyRead;
 
 end Behavioral;
 

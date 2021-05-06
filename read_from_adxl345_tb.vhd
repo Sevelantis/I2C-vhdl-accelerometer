@@ -1,6 +1,3 @@
--- Vhdl test bench created from schematic /home/jednorozecxd/Desktop/UCISW2/Akcelerometr/scheme_1.sch - Fri Apr 30 10:41:51 2021
-
---
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -12,6 +9,7 @@ use std.textio.all;
 LIBRARY UNISIM;
 USE UNISIM.Vcomponents.ALL;
 
+--entityy
 ENTITY scheme_1_scheme_1_sch_tb IS
 END scheme_1_scheme_1_sch_tb;
 ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS 
@@ -23,9 +21,6 @@ ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS
           Reset	:	IN	STD_LOGIC; 
           Clk	:	IN	STD_LOGIC; 
           Start	:	IN	STD_LOGIC; 
-          I2C_Address	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
-          I2C_Go	:	OUT	STD_LOGIC; 
-          I2C_Busy	:	OUT	STD_LOGIC; 
           X	:	OUT	STD_LOGIC_VECTOR (15 DOWNTO 0); 
           Y	:	OUT	STD_LOGIC_VECTOR (15 DOWNTO 0); 
           Z	:	OUT	STD_LOGIC_VECTOR (15 DOWNTO 0));
@@ -36,17 +31,14 @@ ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS
    SIGNAL NACK	:	STD_LOGIC;
    SIGNAL Reset	:	STD_LOGIC;
    SIGNAL Start	:	STD_LOGIC;
-   SIGNAL I2C_Address	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
-   SIGNAL I2C_Go	:	STD_LOGIC;
-   SIGNAL I2C_Busy	:	STD_LOGIC;
    SIGNAL X	:	STD_LOGIC_VECTOR (15 DOWNTO 0);
    SIGNAL Y	:	STD_LOGIC_VECTOR (15 DOWNTO 0);
    SIGNAL Z	:	STD_LOGIC_VECTOR (15 DOWNTO 0);
 	
 	-- clock
    signal Clk : std_logic := '0';
-   constant Clk_period : time := 20 ns;
-
+   constant Clk_period : time := 100 ns;
+	
 BEGIN
 
    UUT: scheme_1 PORT MAP(
@@ -56,9 +48,6 @@ BEGIN
 		Reset => Reset, 
 		Clk => Clk, 
 		Start => Start, 
-		I2C_Address => I2C_Address, 
-		I2C_Go => I2C_Go, 
-		I2C_Busy => I2C_Busy, 
 		X => X, 
 		Y => Y, 
 		Z => Z
@@ -67,10 +56,9 @@ BEGIN
 	-- user code
 	Reset <= '1', '0' after 100 ns;
 	Start <= '0', '1' after 200 ns;
-	-- user code
+	-- user code end
 	
-
-   -- Clock process definitions
+	-- clock process 1
    Clk_process :process
    begin
 		Clk <= '0';
@@ -78,9 +66,8 @@ BEGIN
 		Clk <= '1';
 		wait for Clk_period/2;
    end process;
- 
 
-   -- Stimulus process
+   -- clock process 2
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
@@ -92,8 +79,9 @@ BEGIN
 
       wait;
    end process;
-
-	-- slave answer on I2C communication
+	-- clock process end
+	
+	-- slave answer process
 	SDA <= 'H';
    SCL <= 'H';
    process
@@ -199,6 +187,6 @@ BEGIN
          
       end loop;
    end process;
-
-
+	-- slave answer process end
+	
 END;
