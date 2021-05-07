@@ -1,3 +1,4 @@
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -9,7 +10,7 @@ use std.textio.all;
 LIBRARY UNISIM;
 USE UNISIM.Vcomponents.ALL;
 
---entityy
+
 ENTITY scheme_1_scheme_1_sch_tb IS
 END scheme_1_scheme_1_sch_tb;
 ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS 
@@ -37,8 +38,8 @@ ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS
 	
 	-- clock
    signal Clk : std_logic := '0';
-   constant Clk_period : time := 100 ns;
-	
+   constant Clk_period : time := 20 ns;
+
 BEGIN
 
    UUT: scheme_1 PORT MAP(
@@ -53,11 +54,18 @@ BEGIN
 		Z => Z
    );
 
+---- *** Test Bench - User Defined Section ***
+--   tb : PROCESS
+--   BEGIN
+--      WAIT; -- will wait forever
+--   END PROCESS;
+---- *** End Test Bench - User Defined Section ***
+
 	-- user code
 	Reset <= '1', '0' after 100 ns;
 	Start <= '0', '1' after 200 ns;
 	-- user code end
-	
+
 	-- clock process 1
    Clk_process :process
    begin
@@ -80,14 +88,15 @@ BEGIN
       wait;
    end process;
 	-- clock process end
-	
-	-- slave answer process
-	SDA <= 'H';
+
+	----------------------------------------------------------------
+	-- I2C SLAVE
+   SDA <= 'H';
    SCL <= 'H';
    process
       variable bAddr  : std_logic_vector( 7 downto 0 );             -- I2C adress received as the first byte
       variable bWrite : std_logic_vector( 7 downto 0 );             -- byte received in write transfers
-      variable bRead  : std_logic_vector( 7 downto 0 ) := X"34";    -- byte transmitted in read transfers
+      variable bRead  : std_logic_vector( 7 downto 0 ) := X"35";    -- byte transmitted in read transfers
       variable Ack : std_logic;
       variable L: line;	-- simulation messages (textio)
    begin
@@ -180,13 +189,12 @@ BEGIN
                exit when Ack /= '0';
 
                -- Increment byte to be transmitted in the next read slot
-               bRead := std_logic_vector( unsigned( bRead ) + 5 );
+               bRead := std_logic_vector( unsigned( bRead ) + 1 );
             end loop;
 
          end if;
          
       end loop;
    end process;
-	-- slave answer process end
-	
+
 END;

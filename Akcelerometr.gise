@@ -97,12 +97,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1620325845" xil_pn:in_ck="-6561455112300838814" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1620325845">
+    <transform xil_pn:end_ts="1620380427" xil_pn:in_ck="-3581351329382323917" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1620380427">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../UCISW2-materialy/I2C_Master.vhd"/>
       <outfile xil_pn:name="SteeringBox.vhd"/>
-      <outfile xil_pn:name="read_from_adxl345_tb.vhd"/>
+      <outfile xil_pn:name="adxl_345_tb.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1620324042" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3703284744321772862" xil_pn:start_ts="1620324042">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -117,15 +117,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1620325845" xil_pn:in_ck="8744262961459304057" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1620325845">
+    <transform xil_pn:end_ts="1620380427" xil_pn:in_ck="3867121138014208202" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1620380427">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../UCISW2-materialy/I2C_Master.vhd"/>
       <outfile xil_pn:name="SteeringBox.vhd"/>
-      <outfile xil_pn:name="read_from_adxl345_tb.vhd"/>
+      <outfile xil_pn:name="adxl_345_tb.vhd"/>
       <outfile xil_pn:name="scheme_1.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1620325846" xil_pn:in_ck="8744262961459304057" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4264877182769662785" xil_pn:start_ts="1620325845">
+    <transform xil_pn:end_ts="1620380428" xil_pn:in_ck="3867121138014208202" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4264877182769662785" xil_pn:start_ts="1620380427">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -137,11 +137,9 @@
       <outfile xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1620325846" xil_pn:in_ck="-8198923365907521627" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6118330565677642676" xil_pn:start_ts="1620325846">
+    <transform xil_pn:end_ts="1620380428" xil_pn:in_ck="-8198923365907521627" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6118330565677642676" xil_pn:start_ts="1620380428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="scheme_1_scheme_1_sch_tb_isim_beh.wdb"/>

@@ -176,14 +176,15 @@ end process;
 
 -- set states resources
 --I2C_FIFO_DI 					X"00" -> 4+4[bit]= 1 [bajt]
-I2C_FIFO_DI <= X"2D" when STATE = qInitSetAddr;
-I2C_FIFO_DI <= X"08" when STATE = qInitSetAddrVal;
-I2C_FIFO_DI <= X"32" when STATE = qPush;
+I2C_FIFO_DI <= X"2D" when STATE = qInitSetAddr
+							else X"08" when STATE = qInitSetAddrVal
+							else X"32" when STATE = qPush;
 
 --I2C_FIFO_Push
 I2C_FIFO_Push <= '1' when (STATE = qInitSetAddr or
 									STATE = qInitSetAddrVal or
-									STATE = qPush);
+									STATE = qPush)
+									else '0';
 --I2C_Address
 I2C_Address <= X"3A" when (STATE = qInitWrite or STATE = qWrite)
 									else X"3B" when STATE = qRead;
