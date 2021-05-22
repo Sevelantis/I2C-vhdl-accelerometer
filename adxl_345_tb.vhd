@@ -38,7 +38,7 @@ ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS
 	
 	-- clock
    signal Clk : std_logic := '0';
-   constant Clk_period : time := 20 ns;
+   constant Clk_period : time := 16624 ps;
 
 BEGIN
 
@@ -93,7 +93,7 @@ BEGIN
 	-- I2C SLAVE
    SDA <= 'H';
    SCL <= 'H';
-   process
+   SLAVE_ANSWER: process
       variable bAddr  : std_logic_vector( 7 downto 0 );             -- I2C adress received as the first byte
       variable bWrite : std_logic_vector( 7 downto 0 );             -- byte received in write transfers
       variable bRead  : std_logic_vector( 7 downto 0 ) := X"35";    -- byte transmitted in read transfers
@@ -189,7 +189,7 @@ BEGIN
                exit when Ack /= '0';
 
                -- Increment byte to be transmitted in the next read slot
-               bRead := std_logic_vector( unsigned( bRead ) + 1 );
+               bRead := std_logic_vector( unsigned( bRead ) + 3 );
             end loop;
 
          end if;

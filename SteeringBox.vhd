@@ -46,6 +46,7 @@ type qSTATES is (
 signal STATE, STATE_NEXT : qSTATES;
 
 signal CNTR : integer range 0 to 5;
+signal CNTR_WAIT : integer range 0 to 500000;
 	
 begin
 
@@ -61,13 +62,14 @@ begin
 	end if;
 end process;
 
--- action on states:  qPop, qWait, qBusyRead
+-- action on states:  qBusyRead, qPop, qWait
 HANDLE_ACTION_ON_STATES: process(CLK)
 begin
 				
 	if rising_edge(CLK) then
 	
 		if STATE = qBusyRead then
+			CNTR_WAIT <= 0;
 			CNTR <= 0;
 		
 		elsif STATE = qPop then
@@ -96,15 +98,15 @@ begin
 		
 			CNTR <= CNTR + 1;
 			
-		--elsif STATE = qWait then
-			--TODO wait
+		elsif STATE = qWait then
+			CNTR_WAIT <= CNTR_WAIT + 1;
 			
 		end if;
 	end if;
 end process;
 
 -- set states transitions
-HANDLE_STATES: process(STATE, I2C_Busy, Start)
+HANDLE_STATES: process(STATE, I2C_Busy, Start, CNTR_WAIT)
 begin 
 
 	STATE_NEXT <= STATE; -- define next transition
@@ -165,10 +167,9 @@ begin
 			STATE_NEXT <= qPopData;
 		
 		when qWait =>
-			--todo add wait
-			--if ITERATIONS = 500000 then
+			if CNTR_WAIT = 500000 then
 				STATE_NEXT <= qPush;
-			--end if;
+			end if;
 	
 	end case;
 		
@@ -200,9 +201,6 @@ I2C_ReadCnt <= X"6" when STATE = qRead else X"0";
 
 --I2C_FIFO_Pop
 I2C_FIFO_Pop <= '1' when STATE = qPop else '0';
-
---CNTR
---CNTR <= 0 when STATE = qBusyRead;
 
 end Behavioral;
 
