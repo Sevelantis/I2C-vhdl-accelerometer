@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/scheme_1_scheme_1_sch_tb_isim_beh.exe" -prj "/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/scheme_1_scheme_1_sch_tb_beh.prj" "work.scheme_1_scheme_1_sch_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/scheme_1_isim_beh.exe" -prj "/home/jednorozecxd/Desktop/UCISW2/Akcelerometr/scheme_1_beh.prj" "work.scheme_1" 
