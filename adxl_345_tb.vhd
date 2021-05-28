@@ -38,7 +38,7 @@ ARCHITECTURE behavioral OF scheme_1_scheme_1_sch_tb IS
 	
 	-- clock
    signal Clk : std_logic := '0';
-   constant Clk_period : time := 16624 ps;
+   constant Clk_period : time := 20 ns;
 
 BEGIN
 

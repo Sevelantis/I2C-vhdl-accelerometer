@@ -2,6 +2,24 @@
 NET "Clk_50MHz" LOC = "C9" | IOSTANDARD = LVTTL;
 NET "Clk_50MHz" PERIOD = 20.0ns HIGH 50%;
 
+NET "Reset" LOC = "P1";
+NET "Clk" LOC = "P2";
+NET "Start" LOC = "P3";
+NET "I2C_Busy" LOC = "P4";
+NET "I2C_FIFO_Empty" LOC = "P5";
+NET "I2C_FIFO_Full" LOC = "P6";
+NET "I2C_FIFO_DO" LOC = "P7";
+NET "I2C_FIFO_Pop" LOC = "P8";
+NET "I2C_Go" LOC = "P9";
+NET "I2C_FIFO_Push" LOC = "P10";
+NET "I2C_Address" LOC = "P11";
+NET "I2C_FIFO_DI" LOC = "P12";
+NET "CI2C_ReadCntlk" LOC = "P13";
+NET "X" LOC = "P14";
+NET "Y" LOC = "P15";
+NET "Z" LOC = "P16";
+
+
 # Ignore cross-clock domain data paths in timing analysis
 #NET "Clk50"  TNM = "TNM_Clk50";
 #NET "ClkSys" TNM = "TNM_ClkSys";
